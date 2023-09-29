@@ -1,2 +1,1 @@
-# avinhahuynh
-Where I shall put my portfolio so that the hiring team accepts me
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
