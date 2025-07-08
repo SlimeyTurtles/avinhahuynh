@@ -1,5 +1,6 @@
 import CardMatrix from "@/components/cardMatrix"
 import Hero from "@/components/Hero"
+import Experience from "@/components/Experience"
 
 export default function Home() {
 
@@ -7,7 +8,10 @@ export default function Home() {
     <div>
       <Hero />
 
-      <CardMatrix />
+      {/* <CardMatrix /> */}
+
+      <Experience />
+
     </div>
   )
 }
