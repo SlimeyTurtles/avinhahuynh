@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background: gray;
+  font-family: 'Montserrat', sans-serif;
 }
