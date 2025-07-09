@@ -14,7 +14,7 @@ export default () => {
 
         <div className= "flex flex-col items-center gap-4">
         { isExperience && experienceData.map((experience, index) => (
-            <div className="w-[60vw] bg-slate-700 flex flex-row gap-4 p-4 rounded-md">
+            <div className="w-[60vw] bg-slate-700 flex flex-row gap-4 p-4 rounded-md" key={index}>
                 <div className="flex flex-col items-center gap-2">
                     <div className="w-12 h-12 shrink-0 relative z-10">
                         <img
@@ -28,13 +28,13 @@ export default () => {
                 </div>
 
 
-                <div className="" key={index}>
+                <div className="">
                     <h3>{experience.date}</h3>
                     <h2>{experience.company}</h2>
                     <h3>{experience.title}</h3>
                     <ul className="pl-4">
-                        { experience.items.map((item) => (
-                            <li className="list-disc">{item}</li>
+                        { experience.items.map((item, i) => (
+                            <li className="list-disc" key={i}>{item}</li>
                         ))}
                     </ul>
                 </div>
