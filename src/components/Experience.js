@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import Image from 'next/image'
+
 import experienceData from '@/data/experience.json';
 
-export default () => {
+const Experience = () => {
     const [isExperience, setIsExperience] = useState(true);
 
     return (
@@ -17,10 +19,12 @@ export default () => {
             <div className="w-[60vw] bg-slate-700 flex flex-row gap-4 p-4 rounded-md" key={index}>
                 <div className="flex flex-col items-center gap-2">
                     <div className="w-12 h-12 shrink-0 relative z-10">
-                        <img
-                        className="w-full h-full object-cover rounded-full border-2 border-slate-300 bg-slate-300"
-                        src={experience.img}
-                        alt={`Logo for ${experience.company}`}
+                        <Image
+                            src={experience.img}
+                            alt={`Logo for ${experience.company}`}
+                            width={48}
+                            height={48}
+                            className="rounded-full border-2 border-slate-300 bg-slate-300 object-cover"
                         />
                     </div>
 
@@ -44,3 +48,5 @@ export default () => {
     </div>
     )
 }
+
+export default Experience
