@@ -74,10 +74,10 @@ const Contact = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
+            Have a project in mind? I&apos;d love to hear about it and discuss how we can bring your ideas to life.
           </p>
         </div>
         
@@ -87,7 +87,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Get in Touch</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative projects, 
+                I&apos;m always open to discussing new opportunities, creative projects, 
                 or just having a chat about technology and development. Feel free to 
                 reach out through any of the channels below.
               </p>
