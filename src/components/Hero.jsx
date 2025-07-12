@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container-custom text-center text-white">
+      <div className="relative z-10 container-custom text-center text-white px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 1.0 }}
             >
               <motion.a 
-                href="https://github.com" 
+                href="https://github.com/SlimeyTurtles" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
@@ -127,7 +127,7 @@ const Hero = () => {
                 <Github className="w-6 h-6" />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/avinh-huynh/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
@@ -137,7 +137,7 @@ const Hero = () => {
                 <Linkedin className="w-6 h-6" />
               </motion.a>
               <motion.a 
-                href="mailto:your@email.com"
+                href="mailto:avinhahuynh@email.com"
                 className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
