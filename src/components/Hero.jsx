@@ -10,13 +10,11 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 
-          src="/hero-background.jpg" 
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          quality={100}
+          src="/hero-background.jpg"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
           priority
-          alt="Hero background"
+          alt="Hero Background"
         />
         <div className="absolute inset-0 hero-gradient opacity-90"></div>
       </div>
@@ -51,15 +49,22 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="lg:order-1 text-left lg:text-left">
+            <motion.h2
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 mb-2"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Hi, I'm
+            </motion.h2>
             <motion.h1 
               className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Hi, I'm{" "}
               <span className="bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-                Your Name
+                Avinh Huynh
               </span>
             </motion.h1>
             <motion.p 
@@ -97,7 +102,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg"
+                className="border-primary bg-primary text-white hover:bg-primary hover:text-white font-semibold px-8 py-4 text-lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Let's Connect

@@ -1,35 +1,26 @@
 [
   {
-    "company": "Arch Insurance", 
     "title": "Consultant",
-    "date": "Dec. 2023 - Present",
-    "img": "/arch-logo.png",
-    "items": [
-      "Develop end-to-end cloud solutions using ServiceNow, GitHub Actions, and Terraform to automate infrastructure provisioning through ServiceNow forms and GitHub API calls.",
-      "Design Power BI dashboards for tracking ServiceNow ticket metrics, pulling data from the ServiceNow API and Snowflake, saving up to one week per month of manual data processing.",
-      "Achieve AWS Cloud Practitioner certification and complete relevant cloud/DevOps training on Pluralsight in AWS, Azure, Docker, Kubernetes, Terraform, and GitHub Actions."
-    ]
+    "company": "Arch Insurance",
+    "location": "Remote",
+    "period": "Dec. 2023 - Present",
+    "description": "Automated cloud infrastructure provisioning using ServiceNow forms, GitHub Actions, and Terraform. Designed Power BI dashboards and streamlined data workflows using ServiceNow API and Snowflake.",
+    "technologies": ["AWS", "Terraform", "GitHub Actions", "Power BI", "ServiceNow"]
   },
   {
-    "company": "Flow Immersive",
     "title": "XR/AI Intern",
-    "date": "Jun. 2025 - Present",
-    "img": "/flow-logo.jpg",
-    "items": [
-      "Design and update interactive 3D data visualizations (“Flows”) for augmented and virtual reality experiences, creating showcase demos and conducting user testing to explore platform capabilities and performance.",
-      "Evaluate and document AI-assisted features within the platform, contributing to UX research by identifying usability issues, AI capabilities, and recommending improvements.",
-      "Collaborate with interns to develop novel use cases for Flow's platform, contributing Gen Z perspectives on data storytelling, media consumption, and AI integration trends."
-    ]
+    "company": "Flow Immersive",
+    "location": "Remote",
+    "period": "Jun. 2025 - Present",
+    "description": "Designed and tested interactive 3D data visualizations for AR/VR, evaluated AI-assisted features, and contributed to UX research and media storytelling innovation.",
+    "technologies": ["Data Manipulation", "Flow Editor"]
   },
   {
-    "company": "San Francisco State University",
     "title": "Research Assistant",
-    "date": "Feb. 2025 - May 2025",
-    "img": "/sfsu-logo.png",
-    "items": [
-      "Developed Python scripts to generate and analyze Jungerman's Ladders, focusing on an incomplete case from his research and producing solutions with specific constraints.",
-      "Built a Pygame visualizer to explore ladder solutions and identify patterns that met the case criteria.",
-      "Created a Python script to verify the validity of any given ladder and manually validated the finalized solution."
-    ]
+    "company": "San Francisco State University",
+    "location": "San Francisco, CA",
+    "period": "Feb. 2025 - May 2025",
+    "description": "Created Python scripts to solve and visualize Jungerman's Ladders under specific constraints, producing valid, verifiable solutions and pattern insights.",
+    "technologies": ["Python", "Pygame", "Mathematics", "Algorithm Design"]
   }
 ]

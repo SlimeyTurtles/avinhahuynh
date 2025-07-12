@@ -1,8 +1,10 @@
 [
   {
-    "company": "San Francisco State University", 
-    "title": "B.S. Computer Science",
-    "date": "Dec. 2023 - Jul. 2025",
-    "img": "/sfsu-logo.png"
+    "degree": "B.S. Computer Science",
+    "institution": "San Francisco State University",
+    "location": "San Francisco, CA",
+    "period": "Dec. 2023 - Jul. 2025",
+    "description": "Studied core areas of computer science including software engineering, algorithms, and cloud infrastructure. Made the Dean's List.",
+    "achievements": ["Dean's List", "3.2 GPA"]
   }
 ]
