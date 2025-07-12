@@ -105,7 +105,7 @@ const Hero = () => {
                 className="border-primary bg-primary text-white hover:bg-primary hover:text-white font-semibold px-8 py-4 text-lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Let's Connect
+                Let&apos;s Connect
               </Button>
             </motion.div>
           
