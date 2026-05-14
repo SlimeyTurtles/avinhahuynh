@@ -1,0 +1,26 @@
+[
+  {
+    "name": "SporkMoney",
+    "period": "Jan 2026 - Feb 2026",
+    "areas": ["Full Stack"],
+    "description": "Personal finance app for tracking spending, setting budget goals, and seeing what I can afford. Plaid integration for syncing accounts, plus projection math for daily allowance, savings runway, and emergency-fund timelines.",
+    "technologies": ["Next.js", "Prisma", "Plaid API", "Docker"],
+    "image": "",
+    "links": [
+      { "label": "Live", "href": "https://sporkmoney.com/" },
+      { "label": "GitHub", "href": "https://github.com/SlimeyTurtles/better-budget/" }
+    ]
+  },
+  {
+    "name": "Streamour",
+    "period": "Dec 2025 - Jan 2026",
+    "areas": ["Full Stack"],
+    "description": "Self-hosted streaming server that converts MKV to HLS for phone and desktop. Cookie auth, middleware-protected routes, and partial content delivery for seeking on mobile.",
+    "technologies": ["Next.js", "Prisma", "HLS", "Docker", "Nginx"],
+    "image": "",
+    "links": [
+      { "label": "Live", "href": "https://streamour.net/" },
+      { "label": "GitHub", "href": "https://github.com/SlimeyTurtles/streamour" }
+    ]
+  }
+]

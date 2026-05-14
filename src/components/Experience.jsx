@@ -1,165 +1,157 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Building, GraduationCap } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import Tag from "@/components/Tag";
 
 import workExperience from "@/data/experience";
 import education from "@/data/education";
+import certifications from "@/data/certifications";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.06 } }
+};
+
+const Row = ({ left, children, first }) => (
+  <div className={`grid md:grid-cols-[140px,1fr] gap-2 md:gap-8 py-5 ${first ? "" : "border-t border-border"}`}>
+    <div className="text-sm text-muted-foreground md:pt-0.5 whitespace-nowrap">
+      {left}
+    </div>
+    <div>{children}</div>
+  </div>
+);
+
+const Bullets = ({ items }) =>
+  items?.length ? (
+    <ul className="mt-3 space-y-1.5 pl-5">
+      {items.map((b, i) => (
+        <li
+          key={i}
+          className="text-[15px] text-foreground/85 leading-relaxed list-disc marker:text-primary/70"
+        >
+          {b}
+        </li>
+      ))}
+    </ul>
+  ) : null;
 
 const Experience = () => {
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   return (
-    <section id="experience" className="section-padding bg-background">
+    <section id="experience" className="section-padding bg-muted/40">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
+        <motion.h2
+          initial={{ opacity: 0, y: -6 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight mb-6"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Experience & Education
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My professional journey and academic background
-          </p>
+          Experience
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mb-14"
+        >
+          {workExperience.map((job, index) => (
+            <motion.div key={index} variants={itemVariants} transition={{ duration: 0.35 }}>
+              <Row left={job.period} first={index === 0}>
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <h4 className="text-base md:text-lg font-semibold text-foreground">
+                    {job.title}
+                  </h4>
+                  <span className="text-sm text-muted-foreground">· {job.company}</span>
+                </div>
+                {job.areas?.length > 0 && (
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                    {job.areas.map((a) => (
+                      <Tag key={a} label={a} size="sm" />
+                    ))}
+                  </div>
+                )}
+                <Bullets items={job.bullets} />
+                {job.technologies?.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-4">
+                    {job.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-background border border-border text-foreground/70"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </Row>
+            </motion.div>
+          ))}
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Work Experience */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <Building className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-semibold text-foreground">Work Experience</h3>
-            </div>
-            
-            <div className="space-y-6">
-              {workExperience.map((job, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={itemVariants}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card className="card-elegant border-0 overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <CardHeader className="pb-3">
-                      <div className="flex flex-col gap-2">
-                        <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {job.title}
-                        </h4>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1 whitespace-nowrap">
-                            <Building className="w-4 h-4" />
-                            {job.company}
-                          </div>
-                          <div className="flex items-center gap-1 whitespace-nowrap">
-                            <MapPin className="w-4 h-4" />
-                            {job.location}
-                          </div>
-                          <div className="flex items-center gap-1 whitespace-nowrap">
-                            <Calendar className="w-4 h-4" />
-                            {job.period}
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {job.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {job.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: -6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight mb-6"
+        >
+          Education
+        </motion.h2>
 
-          {/* Education */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <GraduationCap className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-semibold text-foreground">Education</h3>
-            </div>
-            
-            <div className="space-y-6">
-              {education.map((edu, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={itemVariants}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card className="card-elegant border-0 overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <CardHeader className="pb-3">
-                      <div className="flex flex-col gap-2">
-                        <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {edu.degree}
-                        </h4>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <GraduationCap className="w-4 h-4" />
-                            {edu.institution}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            {edu.location}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {edu.period}
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {edu.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {edu.achievements.map((achievement, achIndex) => (
-                          <Badge key={achIndex} variant="outline" className="text-xs">
-                            {achievement}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mb-14"
+        >
+          {education.map((edu, index) => (
+            <motion.div key={index} variants={itemVariants} transition={{ duration: 0.35 }}>
+              <Row left={edu.period} first={index === 0}>
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <h4 className="text-base md:text-lg font-semibold text-foreground">
+                    {edu.degree}
+                  </h4>
+                  <span className="text-sm text-muted-foreground">· {edu.institution}</span>
+                </div>
+                <Bullets items={edu.bullets} />
+              </Row>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: -6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight mb-6"
+        >
+          Certifications
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {certifications.map((cert, index) => (
+            <motion.div key={index} variants={itemVariants} transition={{ duration: 0.35 }}>
+              <Row left={cert.date} first={index === 0}>
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <h4 className="text-base font-semibold text-foreground">{cert.name}</h4>
+                  <span className="text-sm text-muted-foreground">· {cert.issuer}</span>
+                </div>
+              </Row>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

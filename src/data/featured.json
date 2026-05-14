@@ -1,0 +1,37 @@
+[
+  {
+    "title": "FinOps reporting, automated",
+    "org": "Arch Insurance — Infrastructure Analytics",
+    "areas": ["DevOps"],
+    "description": "Automated cloud cost reporting for the team using Python, Azure, IBM Cloudability, and Power BI. Built a web GUI on top so non-technical stakeholders can run reports on demand instead of filing tickets.",
+    "stack": ["Azure", "Power BI", "IBM Cloudability", "Python"],
+    "image": ""
+  },
+  {
+    "title": "Ardoq ↔ Fusion automation",
+    "org": "Arch Insurance — Infrastructure Analytics",
+    "areas": ["DevOps"],
+    "description": "Automated architectural data sync between two enterprise systems and built a web GUI for the ops team to review new integrations and triage broken records or dependencies as they surface.",
+    "stack": ["Ardoq", "Fusion", "Python", "REST APIs"],
+    "image": ""
+  },
+  {
+    "title": "ML model visualizer",
+    "org": "SFSU RADLab — research with Dr. Suri",
+    "areas": ["Machine Learning"],
+    "description": "A web tool for stepping through applied ML models visually — IAC, Rumelhart-style neural networks, and other semantic memory simulations. Researchers can wire up units and layers and watch each training step run in the browser.",
+    "stack": ["Next.js", "Neural Networks", "Cognitive Modeling"],
+    "image": "",
+    "href": "https://iac-visualizer.duckdns.org",
+    "repo": "https://github.com/SlimeyTurtles/iac-visualizer"
+  },
+  {
+    "title": "Flow Immersive — web platform",
+    "org": "Flow Immersive (intern)",
+    "areas": ["Full Stack"],
+    "description": "Lead developer on the company's Next.js web platform. Built the full site end-to-end — blog, admin dashboard, and supporting tooling — designing the UX/UI in close collaboration with the founder and other stakeholders.",
+    "stack": ["Next.js", "React", "Flow Editor"],
+    "image": "",
+    "href": "https://flow.gl"
+  }
+]

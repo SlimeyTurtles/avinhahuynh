@@ -1,167 +1,175 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import ParticleNetwork from "@/components/ParticleNetwork";
+import Tag from "@/components/Tag";
 
-import Image from "next/image"
+const focusAreas = [
+  {
+    tag: "Machine Learning",
+    text: "Cognitive science research at SFSU RADLab with Dr. Suri. Applying ML to study how we represent semantic memory."
+  },
+  {
+    tag: "DevOps",
+    text: "Systems engineer at Arch Insurance. Build automation and internal web tools for the team."
+  },
+  {
+    tag: "Full Stack",
+    text: "Build what I want and enhance what I have — SporkMoney so I have more money, Streamour for ad-free self-hosted streaming."
+  }
+];
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image 
-          src="/hero-background.jpg"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          priority
-          alt="Hero Background"
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[hsl(28_90%_92%)] via-[hsl(30_75%_94%)] to-[hsl(30_60%_97%)]">
+      <div className="absolute inset-0 opacity-40">
+        <ParticleNetwork
+          density={0.00005}
+          linkDistance={120}
+          speed={0.16}
+          pointColor="rgba(234, 88, 12, 0.55)"
+          linkColor="234, 88, 12"
         />
-        <div className="absolute inset-0 hero-gradient opacity-90"></div>
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 container-custom text-center text-white px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
-          className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
-        >
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center lg:order-2"
-          >
-            <div className="relative w-64 md:w-80 h-64 md:h-80 rounded-full overflow-hidden bg-gradient-to-br from-white/20 to-primary/20 p-2">
-              <div className="relative w-full h-full rounded-full overflow-hidden">
-                <Image 
-                  src="/profile.jpg" 
-                  alt="Professional headshot"
-                  fill
-                  className="object-cover rounded-full"
-                  priority
-                />
-              </div>
-            </div>
-          </motion.div>
 
-          {/* Text Content */}
-          <div className="lg:order-1 text-left lg:text-left">
-            <motion.h2
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 mb-2"
-              initial={{ opacity: 0, y: 30 }}
+      <div className="relative z-10 container-custom text-foreground px-4 sm:px-6 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="grid lg:grid-cols-[1fr,auto] gap-10 lg:gap-16 items-center"
+        >
+          <div className="lg:order-1 text-left max-w-2xl">
+            <motion.h1
+              className="text-4xl md:text-5xl font-semibold mb-3 leading-[1.05] tracking-tight"
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
             >
-              Hi, I&apos;m
-            </motion.h2>
-            <motion.h1 
-              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-                Avinh Huynh
-              </span>
+              Avinh Huynh
             </motion.h1>
-            <motion.p 
-              className="text-lg md:text-xl mb-6 text-white/90"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.p
+              className="text-base md:text-lg mb-7 text-foreground/75 leading-relaxed"
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.12 }}
             >
-              Full-Stack Developer | Cloud Infrastructure | Automation
+              Senior CS student at SFSU. Starting an M.A. in Psychology (Mind, Brain, Behavior) at SFSU next semester.
             </motion.p>
-            <motion.p 
-              className="text-base md:text-lg mb-10 text-white/80 max-w-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+
+            <motion.div
+              className="space-y-3 mb-9"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.06, delayChildren: 0.2 } }
+              }}
             >
-              I build scalable web applications and cloud solutions that drive business value. 
-              Passionate about automating workflows and creating efficient, maintainable systems.
-            </motion.p>
-          
-            {/* CTA Buttons */}
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <Button 
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 glow-effect font-semibold px-8 py-4 text-lg"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View My Work
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-primary bg-primary text-white hover:bg-primary hover:text-white font-semibold px-8 py-4 text-lg"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Let&apos;s Connect
-              </Button>
+              {focusAreas.map((a) => (
+                <motion.div
+                  key={a.tag}
+                  variants={{ hidden: { opacity: 0, y: 6 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.35 }}
+                  className="grid grid-cols-1 sm:grid-cols-[10rem,1fr] sm:items-baseline gap-x-5 gap-y-1"
+                >
+                  <Tag label={a.tag} size="md" />
+                  <p className="text-[15px] md:text-base text-foreground/85 leading-relaxed">
+                    {a.text}
+                  </p>
+                </motion.div>
+              ))}
             </motion.div>
-          
-            {/* Social Links */}
-            <motion.div 
-              className="flex justify-center lg:justify-start gap-6 mb-12"
+
+            <motion.div
+              className="flex flex-wrap gap-3 mb-5"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
             >
-              <motion.a 
-                href="https://github.com/SlimeyTurtles" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+              <Button
+                size="default"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                onClick={() => document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" })}
               >
-                <Github className="w-6 h-6" />
-              </motion.a>
-              <motion.a 
-                href="https://www.linkedin.com/in/avinh-huynh/" 
-                target="_blank" 
+                See my work
+              </Button>
+              <Button
+                size="default"
+                variant="outline"
+                className="border-foreground/20 bg-transparent text-foreground hover:bg-foreground/5 font-medium"
+                onClick={() => window.open("https://www.linkedin.com/in/avinh-huynh/", "_blank", "noopener,noreferrer")}
+              >
+                <Linkedin className="w-4 h-4 mr-2" />
+                Message on LinkedIn
+              </Button>
+            </motion.div>
+
+            <motion.div
+              className="flex gap-1 -ml-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
+              <a
+                href="https://github.com/SlimeyTurtles"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                className="p-2 rounded-md text-foreground/60 hover:text-foreground transition-colors"
+                aria-label="GitHub"
               >
-                <Linkedin className="w-6 h-6" />
-              </motion.a>
-              <motion.a 
-                href="mailto:avinhahuynh@email.com"
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/avinh-huynh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-md text-foreground/60 hover:text-foreground transition-colors"
+                aria-label="LinkedIn"
               >
-                <Mail className="w-6 h-6" />
-              </motion.a>
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:avinhahuynh@gmail.com"
+                className="p-2 rounded-md text-foreground/60 hover:text-foreground transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex justify-center lg:order-2"
+          >
+            <div className="relative w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 rounded-full overflow-hidden ring-1 ring-foreground/10 shadow-[0_20px_60px_-20px_rgba(234,88,12,0.4)]">
+              <Image
+                src="/headshot.jpg"
+                alt="Avinh Huynh"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "35% 30%" }}
+                priority
+                sizes="(min-width: 1024px) 16rem, 14rem"
+              />
+            </div>
+          </motion.div>
         </motion.div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+
+        <motion.div
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: 1,
-            y: [0, 10, 0] 
-          }}
-          transition={{ 
-            opacity: { delay: 1.2 },
-            y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+          animate={{ opacity: 1, y: [0, 6, 0] }}
+          transition={{
+            opacity: { delay: 1 },
+            y: { duration: 2.2, repeat: Infinity, ease: "easeInOut" }
           }}
         >
-          <ArrowDown className="w-6 h-6 text-white/60" />
+          <ArrowDown className="w-4 h-4 text-foreground/30" />
         </motion.div>
       </div>
     </section>

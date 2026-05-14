@@ -1,26 +1,50 @@
 [
   {
-    "title": "Consultant",
-    "company": "Arch Insurance",
+    "title": "Systems Engineer",
+    "company": "Arch Insurance — Infrastructure Analytics",
     "location": "Remote",
-    "period": "Dec. 2023 - Present",
-    "description": "Automated cloud infrastructure provisioning using ServiceNow forms, GitHub Actions, and Terraform. Designed Power BI dashboards and streamlined data workflows using ServiceNow API and Snowflake.",
-    "technologies": ["AWS", "Terraform", "GitHub Actions", "Power BI", "ServiceNow"]
+    "period": "Dec 2023 - Present",
+    "areas": ["DevOps"],
+    "bullets": [
+      "Build automation and internal tooling for the team using Python, Azure, Power BI, and various enterprise APIs.",
+      "Built a web GUI on top of the automation so the team can run scripts and review integrations on demand."
+    ],
+    "technologies": ["Azure", "Power BI", "Python", "Snowflake", "ServiceNow"]
   },
   {
-    "title": "XR/AI Intern",
+    "title": "Research Assistant",
+    "company": "SFSU RADLab — Dr. Suri",
+    "location": "San Francisco, CA",
+    "period": "Feb 2026 - Present",
+    "areas": ["Machine Learning"],
+    "bullets": [
+      "Apply machine learning to research how humans represent semantic memory.",
+      "Build web-based ML model visualizers for the lab — IAC, Rumelhart-style neural networks, and other simulations researchers can step through one training step at a time."
+    ],
+    "technologies": ["Python", "PyTorch", "Next.js", "Neural Networks", "Cognitive Modeling"]
+  },
+  {
+    "title": "Web Intern",
     "company": "Flow Immersive",
     "location": "Remote",
-    "period": "Jun. 2025 - Present",
-    "description": "Designed and tested interactive 3D data visualizations for AR/VR, evaluated AI-assisted features, and contributed to UX research and media storytelling innovation.",
-    "technologies": ["Data Manipulation", "Flow Editor"]
+    "period": "Jun 2025 - Present",
+    "areas": ["Full Stack"],
+    "bullets": [
+      "Lead developer on Flow's web platform — built the full Next.js site, including the blog and admin dashboard.",
+      "Designed the UX/UI in close collaboration with the founder and other stakeholders, then implemented every piece.",
+      "Built the CRUD features for content management and admin tooling."
+    ],
+    "technologies": ["Next.js", "React", "Flow Editor"]
   },
   {
     "title": "Research Assistant",
     "company": "San Francisco State University",
     "location": "San Francisco, CA",
-    "period": "Feb. 2025 - May 2025",
-    "description": "Created Python scripts to solve and visualize Jungerman's Ladders under specific constraints, producing valid, verifiable solutions and pattern insights.",
-    "technologies": ["Python", "Pygame", "Mathematics", "Algorithm Design"]
+    "period": "Feb 2025 - May 2025",
+    "areas": ["Machine Learning"],
+    "bullets": [
+      "Built Python scripts to solve and visualize Jungerman's Ladders under specific constraints, producing verifiable solutions and pattern insights."
+    ],
+    "technologies": ["Python", "Pygame", "Algorithm Design"]
   }
 ]
