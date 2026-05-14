@@ -6,10 +6,11 @@
     "period": "Dec 2023 - Present",
     "areas": ["DevOps"],
     "bullets": [
-      "Build automation and internal tooling for the team using Python, Azure, Power BI, and various enterprise APIs.",
-      "Built a web GUI on top of the automation so the team can run scripts and review integrations on demand."
+      "Eliminated $100K/year in external vendor spend by automating cloud cost reporting and savings recommendations with Python, Azure, Power BI, and IBM Cloudability.",
+      "Kept architectural data continuously synced across hundreds of applications by scheduling a Python service that merges records between two enterprise systems and surfaces broken dependencies for triage.",
+      "Unblocked non-technical stakeholders and the ops team by building web GUIs they can use to run reports on demand and approve integrations manually."
     ],
-    "technologies": ["Azure", "Power BI", "Python", "Snowflake", "ServiceNow"]
+    "technologies": ["Azure", "Power BI", "Python", "IBM Cloudability", "Ardoq", "Fusion", "Snowflake"]
   },
   {
     "title": "Research Assistant",
@@ -18,8 +19,8 @@
     "period": "Feb 2026 - Present",
     "areas": ["Machine Learning"],
     "bullets": [
-      "Apply machine learning to research how humans represent semantic memory.",
-      "Build web-based ML model visualizers for the lab — IAC, Rumelhart-style neural networks, and other simulations researchers can step through one training step at a time."
+      "Apply machine learning to study how humans represent semantic memory, working with Dr. Suri to implement and evaluate neural network models that mirror cognitive processes.",
+      "Help students build intuition for ML models by building web-based visualizers that show each training step — IAC, Rumelhart-style neural networks, and semantic memory simulations."
     ],
     "technologies": ["Python", "PyTorch", "Next.js", "Neural Networks", "Cognitive Modeling"]
   },
@@ -30,20 +31,20 @@
     "period": "Jun 2025 - Present",
     "areas": ["Full Stack"],
     "bullets": [
-      "Lead developer on Flow's web platform — built the full Next.js site, including the blog and admin dashboard.",
-      "Designed the UX/UI in close collaboration with the founder and other stakeholders, then implemented every piece.",
-      "Built the CRUD features for content management and admin tooling."
+      "Shipped Flow's public-facing website end-to-end as lead developer, covering the blog, admin dashboard, and CRUD content management on Next.js.",
+      "Designed the UX/UI in close collaboration with the founder and other stakeholders, then implemented every piece myself.",
+      "Turned business requirements into working features by translating direct conversations with stakeholders into shipped components and admin tooling."
     ],
     "technologies": ["Next.js", "React", "Flow Editor"]
   },
   {
     "title": "Research Assistant",
-    "company": "San Francisco State University",
+    "company": "SFSU — Dr. Timothy Sun",
     "location": "San Francisco, CA",
     "period": "Feb 2025 - May 2025",
     "areas": ["Machine Learning"],
     "bullets": [
-      "Built Python scripts to solve and visualize Jungerman's Ladders under specific constraints, producing verifiable solutions and pattern insights."
+      "Produced verifiable solutions and pattern insights for Jungerman's Ladders under specific constraints by building Python scripts to solve and visualize valid configurations."
     ],
     "technologies": ["Python", "Pygame", "Algorithm Design"]
   }

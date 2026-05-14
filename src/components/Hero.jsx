@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,9 +28,10 @@ const Hero = () => {
       <div className="absolute inset-0 opacity-40">
         <ParticleNetwork
           density={0.00005}
-          linkDistance={120}
-          speed={0.16}
-          pointColor="rgba(234, 88, 12, 0.55)"
+          linkDistance={130}
+          speed={0.08}
+          lineWidth={0.9}
+          pointColor="rgba(234, 88, 12, 0.6)"
           linkColor="234, 88, 12"
         />
       </div>
@@ -55,7 +58,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.12 }}
             >
-              Senior CS student at SFSU. Starting an M.A. in Psychology (Mind, Brain, Behavior) at SFSU next semester.
+              CS grad from SFSU. Systems engineer at Arch Insurance. Starting an M.A. in Psychology (Mind, Brain, Behavior) at SFSU in Fall 2026.
             </motion.p>
 
             <motion.div
@@ -149,12 +152,12 @@ const Hero = () => {
             <div className="relative w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 rounded-full overflow-hidden ring-1 ring-foreground/10 shadow-[0_20px_60px_-20px_rgba(234,88,12,0.4)]">
               <Image
                 src="/headshot.jpg"
-                alt="Avinh Huynh"
+                alt="Portrait of Avinh Huynh"
                 fill
+                quality={95}
                 className="object-cover"
-                style={{ objectPosition: "35% 30%" }}
                 priority
-                sizes="(min-width: 1024px) 16rem, 14rem"
+                sizes="(min-width: 1024px) 16rem, (min-width: 768px) 14rem, 12rem"
               />
             </div>
           </motion.div>

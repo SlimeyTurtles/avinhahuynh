@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import Tag from "@/components/Tag";
 
 import workExperience from "@/data/experience";
@@ -148,6 +151,17 @@ const Experience = () => {
                   <h4 className="text-base font-semibold text-foreground">{cert.name}</h4>
                   <span className="text-sm text-muted-foreground">· {cert.issuer}</span>
                 </div>
+                {cert.credlyUrl && (
+                  <a
+                    href={cert.credlyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-2 text-xs px-2 py-1 rounded-md border border-foreground/15 text-muted-foreground hover:text-foreground hover:border-foreground/25 hover:bg-foreground/[0.03] transition-colors"
+                  >
+                    View credential
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
               </Row>
             </motion.div>
           ))}

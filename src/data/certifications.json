@@ -2,11 +2,13 @@
   {
     "name": "AWS Solutions Architect Associate",
     "issuer": "Amazon Web Services",
-    "date": "Jul 2025"
+    "date": "Jul 2025",
+    "credlyUrl": "https://www.credly.com/badges/c6b37796-6f31-4707-8ef2-fa31c186f511/linked_in_profile"
   },
   {
     "name": "AWS Certified Cloud Practitioner",
     "issuer": "Amazon Web Services",
-    "date": "Apr 2025"
+    "date": "Apr 2025",
+    "credlyUrl": "https://www.credly.com/badges/0e5911f8-1a32-46df-9166-3fd4176e8683/linked_in_profile"
   }
 ]

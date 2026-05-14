@@ -3,24 +3,34 @@
     "name": "SporkMoney",
     "period": "Jan 2026 - Feb 2026",
     "areas": ["Full Stack"],
-    "description": "Personal finance app for tracking spending, setting budget goals, and seeing what I can afford. Plaid integration for syncing accounts, plus projection math for daily allowance, savings runway, and emergency-fund timelines.",
+    "description": "I wanted to be less poor and know exactly how much I could afford to blow each day. So I built it. Plaid integration syncs all my accounts, and projection math handles daily allowance, savings runway, and emergency-fund timelines.",
     "technologies": ["Next.js", "Prisma", "Plaid API", "Docker"],
-    "image": "",
+    "image": "/sporkmoney-image.png",
     "links": [
       { "label": "Live", "href": "https://sporkmoney.com/" },
       { "label": "GitHub", "href": "https://github.com/SlimeyTurtles/better-budget/" }
-    ]
+    ],
+    "cat": {
+      "name": "Spork",
+      "images": ["/spork1.jpg", "/spork2.jpg", "/spork3.jpg"],
+      "caption": "Yes, the budget app is named after him."
+    }
   },
   {
     "name": "Streamour",
     "period": "Dec 2025 - Jan 2026",
     "areas": ["Full Stack"],
-    "description": "Self-hosted streaming server that converts MKV to HLS for phone and desktop. Cookie auth, middleware-protected routes, and partial content delivery for seeking on mobile.",
+    "description": "The streaming sites I was using were slow, kept buffering, and the subtitles were never in sync. So I built my own. MKV-to-HLS conversion for desktop and mobile, cookie auth, middleware-protected routes, and partial content delivery for clean seeking.",
     "technologies": ["Next.js", "Prisma", "HLS", "Docker", "Nginx"],
-    "image": "",
+    "image": "/streamour-image.png",
     "links": [
       { "label": "Live", "href": "https://streamour.net/" },
       { "label": "GitHub", "href": "https://github.com/SlimeyTurtles/streamour" }
-    ]
+    ],
+    "cat": {
+      "name": "Seymour",
+      "images": ["/seymour1.jpg", "/seymour2.jpg", "/seymour3.jpg", "/seymour4.jpg"],
+      "caption": "The streaming app is named after him."
+    }
   }
 ]
