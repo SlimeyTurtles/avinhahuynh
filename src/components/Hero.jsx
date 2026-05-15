@@ -18,7 +18,7 @@ const focusAreas = [
   },
   {
     tag: "Full Stack",
-    text: "Build what I want and enhance what I have — SporkMoney so I have more money, Streamour for ad-free self-hosted streaming."
+    text: "Build solutions to problems in my day-to-day, and craft customizable UX/UI that enhances offerings for clients."
   }
 ];
 
@@ -151,13 +151,13 @@ const Hero = () => {
           >
             <div className="relative w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 rounded-full overflow-hidden ring-1 ring-foreground/10 shadow-[0_20px_60px_-20px_rgba(234,88,12,0.4)]">
               <Image
-                src="/headshot.jpg"
+                src="/headshot-square.jpg"
                 alt="Portrait of Avinh Huynh"
                 fill
                 quality={95}
                 className="object-cover"
                 priority
-                sizes="(min-width: 1024px) 16rem, (min-width: 768px) 14rem, 12rem"
+                sizes="(min-width: 1024px) 32rem, (min-width: 768px) 28rem, 24rem"
               />
             </div>
           </motion.div>

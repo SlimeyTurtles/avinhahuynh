@@ -26,13 +26,13 @@ export const metadata = {
     siteName: 'Avinh Huynh',
     title: 'Avinh Huynh — Full Stack, DevOps & ML',
     description,
-    images: [{ url: '/headshot.jpg', width: 1200, height: 630, alt: 'Avinh Huynh' }],
+    images: [{ url: '/social-preview.png', width: 1200, height: 630, alt: 'Avinh Huynh — Full Stack, DevOps & ML' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Avinh Huynh — Full Stack, DevOps & ML',
     description,
-    images: ['/headshot.jpg'],
+    images: ['/social-preview.png'],
   },
 }
 
