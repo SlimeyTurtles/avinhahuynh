@@ -33,7 +33,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
         flexDirection: "column",
         backgroundImage:
           "linear-gradient(135deg, hsl(28, 90%, 92%) 0%, hsl(30, 75%, 94%) 55%, hsl(30, 60%, 97%) 100%)",
-        padding: `${s(48)}px ${s(72)}px ${s(56)}px`,
+        padding: `${s(32)}px ${s(60)}px ${s(40)}px`,
         fontFamily: "Inter",
         color: "hsl(20, 14%, 11%)",
         position: "relative",
@@ -44,7 +44,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          gap: s(56),
+          gap: s(40),
           flex: 1,
         }}
       >
@@ -62,10 +62,10 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
           </div>
           <div
             style={{
-              fontSize: s(26),
+              fontSize: s(28),
               color: "hsl(20, 14%, 30%)",
               lineHeight: 1.35,
-              marginBottom: s(36),
+              marginBottom: s(28),
               maxWidth: s(720),
               display: "flex",
             }}
@@ -73,7 +73,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
             {"Systems engineer at Arch Insurance · Full Stack Developer · Applied ML Researcher at SFSU RADLab"}
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: s(18) }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: s(22) }}>
             {focusAreas.map((a) => (
               <div
                 key={a.tag}
@@ -81,7 +81,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "flex-start",
-                  gap: s(24),
+                  gap: s(20),
                 }}
               >
                 <div
@@ -90,8 +90,8 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
                     flexDirection: "row",
                     alignItems: "center",
                     gap: s(10),
-                    width: s(220),
-                    height: s(27),
+                    width: s(240),
+                    height: s(30),
                     flexShrink: 0,
                   }}
                 >
@@ -105,9 +105,9 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
                   />
                   <div
                     style={{
-                      fontSize: s(15),
+                      fontSize: s(17),
                       fontWeight: 700,
-                      letterSpacing: "0.14em",
+                      letterSpacing: "0.12em",
                       color: a.color,
                       lineHeight: 1,
                       display: "flex",
@@ -118,7 +118,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
                 </div>
                 <div
                   style={{
-                    fontSize: s(19),
+                    fontSize: s(21),
                     color: "hsl(20, 14%, 20%)",
                     lineHeight: 1.4,
                     display: "flex",
@@ -134,8 +134,8 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
 
         <div
           style={{
-            width: s(280),
-            height: s(280),
+            width: s(240),
+            height: s(240),
             display: "flex",
             flexShrink: 0,
           }}
@@ -144,11 +144,11 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
           <img
             src={headshotSrc}
             alt="Avinh Huynh"
-            width={s(280)}
-            height={s(280)}
+            width={s(240)}
+            height={s(240)}
             style={{
-              width: s(280),
-              height: s(280),
+              width: s(240),
+              height: s(240),
               objectFit: "cover",
               borderRadius: 9999,
               boxShadow: "0 24px 60px -20px rgba(234, 88, 12, 0.45)",
@@ -163,7 +163,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
-          fontSize: s(20),
+          fontSize: s(22),
           color: "hsl(20, 14%, 35%)",
         }}
       >
