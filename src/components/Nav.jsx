@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const sections = [
@@ -13,9 +14,12 @@ const sections = [
 ];
 
 const Nav = () => {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
+
+  if (pathname !== "/") return null;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);

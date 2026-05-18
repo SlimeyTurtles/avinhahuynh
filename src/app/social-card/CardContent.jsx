@@ -43,12 +43,12 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
         style={{
           display: "flex",
           flexDirection: "row",
-          alignItems: "center",
+          alignItems: "flex-start",
           gap: s(40),
           flex: 1,
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+        <div style={{ display: "flex", flexDirection: "column", flex: 1, alignSelf: "stretch" }}>
           <div
             style={{
               fontSize: s(76),
@@ -65,7 +65,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
               fontSize: s(28),
               color: "hsl(20, 14%, 30%)",
               lineHeight: 1.35,
-              marginBottom: s(28),
+              marginBottom: 0,
               maxWidth: s(720),
               display: "flex",
             }}
@@ -73,6 +73,14 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
             {"Systems engineer at Arch Insurance · Full Stack Developer · Applied ML Researcher at SFSU RADLab"}
           </div>
 
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
           <div style={{ display: "flex", flexDirection: "column", gap: s(22) }}>
             {focusAreas.map((a) => (
               <div
@@ -118,7 +126,7 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
                 </div>
                 <div
                   style={{
-                    fontSize: s(21),
+                    fontSize: s(22),
                     color: "hsl(20, 14%, 20%)",
                     lineHeight: 1.4,
                     display: "flex",
@@ -130,25 +138,27 @@ export default function CardContent({ headshotSrc, scale = 1 }) {
               </div>
             ))}
           </div>
+          </div>
         </div>
 
         <div
           style={{
-            width: s(240),
-            height: s(240),
+            width: s(220),
+            height: s(220),
             display: "flex",
             flexShrink: 0,
+            alignSelf: "center",
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={headshotSrc}
             alt="Avinh Huynh"
-            width={s(240)}
-            height={s(240)}
+            width={s(220)}
+            height={s(220)}
             style={{
-              width: s(240),
-              height: s(240),
+              width: s(220),
+              height: s(220),
               objectFit: "cover",
               borderRadius: 9999,
               boxShadow: "0 24px 60px -20px rgba(234, 88, 12, 0.45)",
